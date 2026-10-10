@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr {
+  display: block;
+}
+
+*{
+  font-family: Outfit;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+  
+@media (max-width:640px) {
+  a.active {
+    background-color: black;
+    color: white;
+  }
+}
+
+
+.bg-fixed {
+  background-color: #000e34; /* الأزرق الداكن */
+}
+
+/* الرسوم المتحركة للدوائر */
+@keyframes moveCircle {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #4000ff; /* الأزرق الفاتح */
+  border-radius: 50%;
+  filter: blur(30px); /* التأثير الضبابي */
+  z-index: -1; /* تحت كل العناصر */
+  animation: moveCircle 10s infinite alternate ease-in-out;
+}
+
+.border-gradient {
+  border-image: linear-gradient(90deg, #8b0089, #434cff) 1;
+}
+
+.img-gradient {
+  filter: invert(31%) sepia(20%) saturate(6675%) hue-rotate(194deg) brightness(102%) contrast(101%);
+}
+
+.border1 {
+  border-radius: 10px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee { display: flex; width: 100%; height: 50px; margin-top: 20px; background: linear-gradient(to right, #000e34,#8b0089, #434cff,#000e34);
+   /* شريط بألوان متدرجة */
+    overflow: hidden; position: relative; border-radius: 10px; }
+.marquee-content {
+  display: flex;
+  animation: scroll 50s linear infinite;
+}
+
+.marquee-item {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px; /* مسافات متساوية بين كل لوجو */
+}
+
+.marquee-item img {
+  filter: brightness(0) invert(1); /* تلوين الشعارات باللون الأبيض */
+  height: 45px;
+  width: auto;
+}
+
+
+.mySwiper {
+  width: 80%;
+  height: 80%;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
